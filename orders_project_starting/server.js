@@ -24,7 +24,9 @@ server.post('/neworder', express.json(), (request, response) => {
 });
 
 //Add the /update/:id code here!
+server.put('/update/:id', express.text({type: '*/*'}), (request, response) => {
 
+});
 
 //Add the /delete/:id code here!
 
