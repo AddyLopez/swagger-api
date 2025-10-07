@@ -25,7 +25,15 @@ server.post('/neworder', express.json(), (request, response) => {
 
 //Add the /update/:id code here!
 server.put('/update/:id', express.text({type: '*/*'}), (request, response) => {
+      let items = orderData.orders;
 
+      items.forEach((item) => {
+            console.log(item);
+            if (item.id == request.params.id) {
+                  console.log("Modifying order...");
+                  item.state = request.body;
+            }
+      });
 });
 
 //Add the /delete/:id code here!
