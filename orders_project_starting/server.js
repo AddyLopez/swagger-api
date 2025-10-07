@@ -42,6 +42,9 @@ server.put('/update/:id', express.text({type: '*/*'}), (request, response) => {
 });
 
 //Add the /delete/:id code here!
+server.delete('/delete/:id', (request, response) => {
+
+});
 
 
 server.listen(3000,()=>{
