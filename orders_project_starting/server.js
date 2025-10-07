@@ -43,7 +43,17 @@ server.put('/update/:id', express.text({type: '*/*'}), (request, response) => {
 
 //Add the /delete/:id code here!
 server.delete('/delete/:id', (request, response) => {
+      let items = orderData.orders;
+      let newData = {"orders": []};
 
+      items.forEach((item) => {
+            console.log(item);
+            if (item.id == request.params.id) {
+                  console.log('Deleting order!');
+            } else {
+                  newData.orders.push(item);
+            }
+      });
 });
 
 
