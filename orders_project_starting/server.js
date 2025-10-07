@@ -56,6 +56,10 @@ server.delete('/delete/:id', (request, response) => {
       });
 
       fs.writeFileSync('orders.json', JSON.stringify(newData));
+
+      response.send("Success");
+      console.log("Success");
+
 });
 
 
