@@ -36,6 +36,9 @@ server.put('/update/:id', express.text({type: '*/*'}), (request, response) => {
       });
 
       fs.writeFileSync('orders.json', JSON.stringify(orderData));
+      
+      response.send('Success');
+      console.log('Success');
 });
 
 //Add the /delete/:id code here!
